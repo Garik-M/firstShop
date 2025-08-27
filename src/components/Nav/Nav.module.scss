@@ -1,0 +1,27 @@
+@import "styles/App.scss";
+
+nav {
+  @include flex(space-between);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 50px;
+  z-index: 4;
+  backdrop-filter: blur(15px);
+
+  .bar{
+    @include flex($gap: 100px);
+    a{
+      font-size: 22px; 
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-decoration: none;
+      color: black
+    }
+    img{
+      width: 40px;
+    }
+  }
+}

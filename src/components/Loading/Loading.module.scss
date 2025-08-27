@@ -1,0 +1,40 @@
+@import "styles/App.scss";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  @include flex($gap: 10px);
+
+  .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: midnightblue;
+    animation: jump 0.5s ease-in-out infinite;
+
+    &:nth-child(1) {
+      animation-delay: .3s;
+    }
+    &:nth-child(2) {
+      animation-delay: .2s;
+    }
+    &:nth-child(3) {
+      animation-delay: .1s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0s;
+    }
+  }
+}
+
+@keyframes jump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

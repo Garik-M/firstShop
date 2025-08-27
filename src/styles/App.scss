@@ -1,3 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: .3s;
+}
+
+@mixin flex($dir1: center, $dir2: center, $gap: 0, $dir: row, $wrap: nowrap){
+  display: flex;
+  justify-content: $dir1;
+  align-items: $dir2;
+  gap: $gap;
+  flex-flow: $dir $wrap;
+}
+
 .App {
   text-align: center;
 }
