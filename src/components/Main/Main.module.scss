@@ -1,7 +1,7 @@
 @import "styles/App.scss";
 
 .categories {
-  padding: 90px 20px 0;
+  padding: 90px 32px 0;
   .category {
     position: relative;
     background-color: white;
@@ -11,6 +11,7 @@
     margin-left: 20px;
     box-shadow: 3px 2px 20px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
+    z-index: 3;
     cursor: pointer;
 
     .current{
