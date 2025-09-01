@@ -1,7 +1,52 @@
 @import "styles/App.scss";
 
-.container{
-  padding: 60px 20px;
+.categories {
+  padding: 90px 20px 0;
+  .category {
+    position: relative;
+    background-color: white;
+    @include flex($gap: 10px);
+    width: 200px;
+    height: 45px;
+    margin-left: 20px;
+    box-shadow: 3px 2px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+
+    .current{
+      color: $green;
+      font-weight: 600;
+      letter-spacing: .5px;
+    }
+    .arrow {
+      transform: scale(0.7) rotate(-90deg);
+      path{
+        fill: $green;
+      }
+      &.down{
+        transform: scale(0.7) rotate(90deg);
+      }
+    }
+    .dropdown {
+      @include flex($dir: column);
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      box-shadow: 3px 2px 20px rgba(0, 0, 0, 0.3);
+      color: $green;
+      font-weight: 600;
+
+      &.open {
+        display: flex;
+      }
+    }
+  }
+}
+.container {
+  padding: 20px;
   margin-top: 30px;
   width: 100%;
   display: grid;

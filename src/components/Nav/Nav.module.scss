@@ -11,17 +11,47 @@ nav {
   z-index: 4;
   backdrop-filter: blur(15px);
 
-  .bar{
+  .bar {
     @include flex($gap: 100px);
-    a{
-      font-size: 22px; 
+    a {
+      position: relative;
+      font-size: 22px;
       font-weight: 600;
       letter-spacing: 1px;
       text-decoration: none;
-      color: black
+      color: $green;
+
+      .basket {
+        stroke: $green;
+      }
+      .added {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: -3px;
+          right: -3px;
+          width: 10px;
+          height: 10px;
+          border-radius: 5px;
+          background-color: red;
+        }
+      }
     }
-    img{
+    .logOutSvg {
+      stroke-width: 0.6px;
+      fill: $green;
+      cursor: pointer;
+    }
+    img {
       width: 40px;
+    }
+    .circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      background-color: rgb(0, 55, 255);
+      cursor: pointer;
     }
   }
 }

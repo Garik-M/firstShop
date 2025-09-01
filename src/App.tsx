@@ -1,17 +1,22 @@
 import "styles/App.scss";
 import Home from "pages/Home";
 import Shop from "pages/Shop";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "components/Login";
+import Login from "pages/Login";
+import Profile from "pages/Profile";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { AddedProvider } from "Context/added/AddedProvider";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />
+      element: <Home />,
     },
     {
-      path: "/shop/:type",
+      path: "/Products/:type",
       element: <Shop />,
     },
     {
@@ -20,14 +25,20 @@ function App() {
     },
     {
       path: "*",
-      element: <div>404</div>
-    }
+      element: <div>404</div>,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
+    },
   ]);
 
   return (
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
+    <AddedProvider>
+      <div className="App">
+        <RouterProvider router={router} />
+      </div>
+    </AddedProvider>
   );
 }
 

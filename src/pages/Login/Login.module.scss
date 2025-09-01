@@ -1,0 +1,95 @@
+@import "styles/App.scss";
+
+body, html{
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: absolute;
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(5, 1, 37), rgb(35, 33, 46));
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  @include flex();
+
+  .login {
+    position: relative;
+    width: 1000px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(150px);
+    border-radius: 20px;
+    color: white;
+    z-index: 3;
+    @include flex();
+
+    .half {
+      width: 600px;
+      height: 100%;
+      @include flex($dir: column, $gap: 40px);
+      font-size: 20px;
+      letter-spacing: 0.8px;
+      .btn {
+        width: 100px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 40px;
+        font-size: 16px;
+        background-color: #d7dfff;
+        border-radius: 5px;
+      }
+    }
+
+    .form {
+      @include flex();
+      transition: 0.8s;
+      position: absolute;
+      top: -50px;
+      left: 50px;
+      height: 120%;
+      width: 400px;
+      background-color:#d7dfff;
+      border-radius: 20px;
+
+      &.sign_up {
+        transform: translateX(500px);
+      }
+
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 180px;
+    left: 250px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #4efcff 0%, #0000 80%);
+    filter: blur(10px);
+    border-radius: 180px;
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 180px;
+    right: 250px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #9d4dff 0%, #0000 80%);
+    filter: blur(0px);
+    border-radius: 150px;
+  }
+}
+
+.nav{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #d7dfff;
+  z-index: 2;
+}

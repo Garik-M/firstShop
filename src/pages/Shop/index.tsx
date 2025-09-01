@@ -6,10 +6,10 @@ import Main from "components/Main";
 import Loading from "components/Loading";
 import Nav from "components/Nav";
 import { categories } from "utils/index";
+import { useRef } from 'react';
 
 const Shop = memo(() => {
   const params = useParams();
-  const navigate = useNavigate();
 
   const [data, setData] = useState<Data[]>();
   const [initialData, setInitialData] = useState<Data[]>();
@@ -47,8 +47,8 @@ const Shop = memo(() => {
     <Loading />
   ) : (
     <div>
-      <Nav />
-      <Main data={data} setData={setData} />
+      <Nav/>
+      <Main data={data} setData={setData}/>
     </div>
   );
 });

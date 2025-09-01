@@ -2,11 +2,16 @@
 
 .card {
   @include flex(space-between, $dir: column, $gap: 30px);
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  height: 380px;
   padding: 20px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  user-select: none;
+
+  &:hover{
+    transform: translateY(-5px) scale(1.01);
+  }
 
   .imgDiv {
     @include flex(start, $dir: column, $gap: 10px);
@@ -19,6 +24,7 @@
     }
     .title {
       font-size: 20px;
+      color: $green;
     }
   }
   .buy {
@@ -30,7 +36,7 @@
       width: 35px;
       height: 35px;
       border-radius: 18px;
-      background-color: black;
+      background-color: $green;
       color: #fff;
       padding: 0 10px 4px;
       font-size: 26px;
@@ -51,6 +57,19 @@
     }
     .price {
       font-size: 20px;
+      color: $green;
     }
+  }
+}
+.new_item {
+  &::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: red;
   }
 }

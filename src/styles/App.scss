@@ -6,6 +6,9 @@
   transition: .3s;
 }
 
+$blue: midnightblue;
+$green: rgb(45, 85, 50);
+
 @mixin flex($dir1: center, $dir2: center, $gap: 0, $dir: row, $wrap: nowrap){
   display: flex;
   justify-content: $dir1;

@@ -1,0 +1,16 @@
+@import "styles/App.scss";
+
+.optionBox {
+  @include flex();
+  width: 100%;
+  height: 45px;
+  &:hover {
+    background-color: $green;
+    color: #fff;
+  }
+
+  &.active{
+    background-color: $green;
+    color: white;
+  }
+}

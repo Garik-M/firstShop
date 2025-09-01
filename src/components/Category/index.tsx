@@ -14,7 +14,7 @@ const Category = ({ type, img, color }: Props) => {
     <div className={styles.container} style={{backgroundColor: color}}>
       <img src={img} alt="product" className={styles.img} fetchPriority="high"/>
       <p className={styles.tagline}>{type.toUpperCase()}</p>
-      <button className={styles.btn} onClick={() => navigate(`/shop/${type}`)}>Shop</button>
+      <button className={styles.btn} onClick={() => navigate(`/products/${type}`)}>Shop</button>
     </div>
   );
 };

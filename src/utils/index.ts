@@ -6,6 +6,7 @@ export const categories = [
   "mens-shirts",
   "mens-shoes",
   "sunglasses",
+  "tablets",
 ];
 export const sources = [
   "https://dl.razerzone.com/src/5915-1-en-v2.png",
@@ -15,13 +16,15 @@ export const sources = [
   "https://www.itailor.co.uk/images/product/shirt/it2385-1.png",
   "https://b2bprod-res.cloudinary.com/images/w_2000,h_2000,c_pad,f_auto,q_auto/afe90dcb448147c88385352b00890cf6_a3c9/IE3530_b2b542_pdp.png?ts=2024-11-18T08:24:03",
   "https://d2o51ft7emegr.cloudfront.net/pub/media/catalog/product/cache/c02a8f2ec8111fd0242402beabc65e40/p/e/pedro_482-gunmetal_stripe-front-sunglass.png",
+  "https://techworlddanforth.com/wp-content/uploads/2024/12/ipad-and-samsung-tab.png",
 ];
 export const colors = [
-  "rgba(0, 169, 11, 1)",
-  "#ff9500ff",
-  "#5E5CE6",
-  "rgba(0, 169, 11, 1)",
-  "#ffd11aff",
-  "#f8271cff",
-  "#0A84FF",
+  "#cdd8e0ff",
+  "#aadae9cf",
+  "#c0b3a5e1",
+  "#dfd0ade7",
+  "#81b9c3c2",
+  "#c9dc98ff",
+  "#c4d8edff",
+  "#b0dec5ff",
 ];
